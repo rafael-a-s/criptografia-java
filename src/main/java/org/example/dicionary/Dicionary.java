@@ -2,44 +2,46 @@ package org.example.dicionary;
 
 public class Dicionary {
 
-    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    String characters = "n}#(3e'@yn@hzQ=3<J23<k&urS";
+    final String alphabetUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    public String getCharactersForTheIndex(int index) {
-        if(index == 0 ) {
-            return String.valueOf(this.characters.charAt(index));
+    final String alphabetLowCase = "abcdefghijklmnopqrstuvwxyz";
+
+    final String charactersUpperCase = "n}#(3e'@yn@hzQ=3<J23<k&urS";
+
+    final String charactersLowCase = "<Juh3@S323knz=en'r@<Q&y#}(";
+
+    public String getCharacters(String letter) {
+        if (letter.equals(letter.toLowerCase())) {
+            return getCharactersLowCase(letter);
         }
-        return this.characters.substring(0 ,index + 1);
+
+        return getCharactersUpperCase(letter);
     }
 
-    public String getLetterForTheIndex(int index) {
-        return String.valueOf(this.alphabet.charAt(index));
-        
+    String getCharactersLowCase(String letter) {
+        var index = alphabetLowCase.indexOf(letter);
+        if(index == 0 ) {
+            return String.valueOf(this.charactersLowCase.charAt(index));
+        }
+
+        return this.charactersLowCase.substring(0 ,index + 1);
     }
 
-    public static void main(String[] args) {
-        Dicionary d = new Dicionary();
-        int index1 = d.alphabet.indexOf("R");
-        int index2 = d.alphabet.indexOf("A");
-        int index3 = d.alphabet.indexOf("F");
-        int index4 = d.alphabet.indexOf("A");
-        int index5 = d.alphabet.indexOf("E");
-        int index6 = d.alphabet.indexOf("L");
-        System.out.print(d.getCharactersForTheIndex(index1));
-        System.out.print(d.getCharactersForTheIndex(index2));
-        System.out.print(d.getCharactersForTheIndex(index3));
-        System.out.print(d.getCharactersForTheIndex(index4));
-        System.out.print(d.getCharactersForTheIndex(index5));
-        System.out.print(d.getCharactersForTheIndex(index6));
+    String getCharactersUpperCase(String letter) {
+        var index = this.alphabetUpperCase.indexOf(letter);
+        if(index == 0 ) {
+            return String.valueOf(this.charactersUpperCase.charAt(index));
+        }
 
-        System.out.println();
-
-        System.out.print(d.getLetterForTheIndex(index1));
-        System.out.print(d.getLetterForTheIndex(index2));
-        System.out.print(d.getLetterForTheIndex(index3));
-        System.out.print(d.getLetterForTheIndex(index4));
-        System.out.print(d.getLetterForTheIndex(index5));
-        System.out.print(d.getLetterForTheIndex(index6));
-
+        return this.charactersUpperCase.substring(0 ,index + 1);
     }
+
+    public String getLetterUpperCaseForTheIndex(int index) {
+        return String.valueOf(this.alphabetUpperCase.charAt(index));
+    }
+
+    public String getLetterLowCaseForTheIndex(int index) {
+        return String.valueOf(this.alphabetLowCase.charAt(index));
+    }
+
 }
