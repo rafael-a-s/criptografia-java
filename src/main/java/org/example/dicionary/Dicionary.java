@@ -6,9 +6,9 @@ public class Dicionary {
 
     final String alphabetLowCase = "abcdefghijklmnopqrstuvwxyz";
 
-    final String charactersUpperCase = "n}#(3e'@yn@hzQ=3<J23<k&urS";
+    final String charactersUpperCase = "n}#(!e'@yn@hzQ=<%J¨[<k&urS";
 
-    final String charactersLowCase = "<Juh3@S323knz=en'r@<Q&y#}(";
+    final String charactersLowCase = "<Juh[@S&!¨knz=en'r@<Q&y#}(";
 
     public String getCharacters(String letter) {
         if (letter.equals(letter.toLowerCase())) {
@@ -20,20 +20,20 @@ public class Dicionary {
 
     String getCharactersLowCase(String letter) {
         var index = alphabetLowCase.indexOf(letter);
-        if(index == 0 ) {
+        if (index == 0) {
             return String.valueOf(this.charactersLowCase.charAt(index));
         }
 
-        return this.charactersLowCase.substring(0 ,index + 1);
+        return this.charactersLowCase.substring(0, index + 1);
     }
 
     String getCharactersUpperCase(String letter) {
         var index = this.alphabetUpperCase.indexOf(letter);
-        if(index == 0 ) {
+        if (index == 0) {
             return String.valueOf(this.charactersUpperCase.charAt(index));
         }
 
-        return this.charactersUpperCase.substring(0 ,index + 1);
+        return this.charactersUpperCase.substring(0, index + 1);
     }
 
     public String getLetterUpperCaseForTheIndex(int index) {
