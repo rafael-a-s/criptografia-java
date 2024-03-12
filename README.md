@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Bem-vindo ao nosso projeto de criptografia! Este projeto Java foi desenvolvido para fornecer uma maneira simples, mas eficaz, de criptografar e descriptografar mensagens de texto utilizando uma abordagem de substituição de caracteres personalizada. Baseamos-se em uma técnica de substituição monoalfábetica onde cada índice do alfabeto, será usado como chave para escolher a quantidade de caracteres do dicionário sujo, para fazer a substituição.
+Bem-vindo ao nosso projeto de criptografia! Este projeto Java foi desenvolvido para fornecer uma maneira simples, mas eficaz, de criptografar e descriptografar mensagens de texto utilizando uma abordagem de substituição de caracteres personalizada. Baseamos-se na técnica de substituição polialfabética onde cada índice do alfabeto será usado como chave para escolher a quantidade de caracteres do dicionário sujo, para fazer a substituição.
 
 ## Componentes do Projeto
 
